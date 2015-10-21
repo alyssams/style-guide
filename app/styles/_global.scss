@@ -1,0 +1,138 @@
+$black:					#000000;
+$blue_light:			#0cc7b8;
+$blue_medium:    		#337ab7;
+$blue_dark: 			#266e68;
+$blueprint:				#050490;
+$blueprint_hover:		#DBD5FF;
+$brown: 				#b88b12;
+$grey: 					#ddd;
+$grey_inactive: 		#e8e8e8;
+$grey_border: 			#e5e5e5;
+$grey_input_bg: 		#383334;
+$grey_input_text: 		#605a5b;
+$grey_input_password:	#b8b8b8;
+$grey_input_bg_light:	#efefef;
+$grey_menu_border: 		#353434;
+$green_dark:			#a6a292;
+$olive: 				#9b957b;
+$teal: 					#0cc7b8;
+$white: 				#fff;
+$yellow: 				#fec31f;
+$yellow_link_hover: 	#b48811;
+$yellow_bg_dark: 		#f1b81e;
+$yellow_active: 		#d59d03;
+$yellow_inactive: 		#ffc320;
+$yellow-drk: 			#e7b018;
+$yellow-med: 			#f4b91f;
+$yellow_dot_active: 	#b48811;
+
+html {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+body {
+/* Margin bottom by footer height */
+margin-bottom: 60px;
+}
+
+body > .container {
+	padding: 60px 15px 0;
+}
+.container .text-muted {
+	margin: 20px 0;
+}
+code {
+	font-size: 80%;
+}
+
+.scrollUp {
+	display: none;
+	position: fixed;
+	bottom: 24px;
+	right: 0;
+	width: 42px;
+	height: 42px;
+	z-index: 5000;
+	a {
+		display: block;
+		height: 100%;
+// background-color: #000;
+color: #fff;
+text-align: center;
+line-height: 42px;
+opacity: .8;
+-webkit-transition: opacity .5s ease;
+-moz-transition: opacity .5s ease;
+-ms-transition: opacity .5s ease;
+-o-transition: opacity .5s ease;
+transition: opacity .5s ease;
+}
+}
+
+.btn {
+	color: $black;
+	height: 40px;
+}
+
+.page-header {
+	margin: 0 !important;
+}
+
+.main-image {
+	background: url('../images/ct-explode.jpg') no-repeat;
+	background-size: cover;
+	width: 100%;
+	margin-top: 60px;
+}
+
+.panel {
+	position: relative;
+}
+
+
+// .line {
+//     width: 1px;
+//     border-bottom: 1px solid white;
+//     position: absolute;
+//     top: 20px;
+//     right: 560px;
+
+// }
+
+// .digital .collapse.in {
+//   right: -420px;
+//   position: absolute;
+//   top: -30px;
+//   height: 100%;
+//   width: 100%;
+// } 
+
+
+
+// MOVE THIS MEDIA QUERY
+
+// /* Responsive: Portrait tablets and up */
+// @media screen and (min-width: 1204px) {
+//   .container {
+//     max-width: 730px;
+//   }
+
+//   /* Remove the padding we set earlier */
+//   .header,
+//   .marketing,
+//   .footer {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+
+//   /* Space out the masthead */
+//   .header {
+//     margin-bottom: 30px;
+//   }
+
+//   /* Remove the bottom border on the jumbotron for visual effect */
+//   .jumbotron {
+//     border-bottom: 0;
+//   }
+// }
