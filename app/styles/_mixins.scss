@@ -1,0 +1,289 @@
+// MEDIA QUERIES
+@mixin breakpoint($point) {
+    @if $point == largeWidth {
+        @media (max-width: 1204px) { @content; }
+    }
+    @else if $point == mediumWidth {
+        @media (max-width: 959px) { @content; }
+    }
+    @else if $point == smallWidth {
+        @media (max-width: 639px) { @content; }
+    }    
+}
+// TEXT STYLES
+@mixin upper {
+    text-transform: uppercase;  
+}
+@mixin no-underline {
+    text-decoration: none;
+}
+@mixin headline-accent {
+    font-family: $script;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+@mixin headline-accent-1($color) {
+    @include headline-accent;
+    color: $color;
+    font-size: 65px;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+    }
+}
+
+@mixin headline-accent-2($color) {
+    @include headline-accent;
+    color: $color;
+    font-size: 50px;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+    }
+}
+@mixin headline-accent-3($color) {
+    @include headline-accent;
+    color: $color;
+    font-size: 35px;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+    }
+}
+@mixin headline-accent-4($color) {
+    @include headline-accent;
+    color: $color;
+    font-size: 25px;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+    }
+}
+@mixin bold-headline {
+    @include upper;
+    color: $black_cmab;
+    font-family: $sans;
+    -webkit-font-smoothing: antialiased;
+}
+@mixin bold-headline-medium {
+    font-size: 43px;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+@mixin bold-headline-large {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+@mixin bold-headline-small {
+    font-size: 24px;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+@mixin bold-headline-1 {
+    @include bold-headline;    
+    font-size: 150px;
+    line-height: 108px;
+    @include bp(mediumWidth) {
+        @include bold-headline-medium;
+    }
+}
+@mixin bold-headline-2 {
+    @include bold-headline;
+    font-size: 132px;
+    line-height: 94px;
+    @include bp(mediumWidth) {
+        @include bold-headline-medium;
+    }
+}
+@mixin bold-headline-3 {
+    @include bold-headline;
+    font-size: 114px;
+    line-height: 83px;
+    @include bp(mediumWidth) {
+        @include bold-headline-medium;
+    }
+}
+@mixin bold-headline-4 {
+    @include bold-headline;
+    font-size: 97px;
+    @include bp(mediumWidth) {
+        @include bold-headline-medium;
+    }
+}
+@mixin bold-headline-5 {
+    @include bold-headline;
+    font-size: 90px;
+    @include bp(mediumWidth) {
+        @include bold-headline-medium;
+    }
+}
+@mixin bold-headline-6 {
+    @include bold-headline;
+    font-size: 45px;
+    @include bp(mediumWidth) {
+        @include bold-headline-large;
+    }
+}
+@mixin bold-headline-7 {
+    @include bold-headline;
+    font-size: 40px;
+    @include bp(mediumWidth) {
+        @include bold-headline-large;
+    }
+}
+@mixin subheadline-mobile {
+    @include bp(mediumWidth) {
+        font-size: 25px;
+        line-height: 23px;
+    }
+}
+@mixin subheadline-1 {
+    color: $black_cmab;
+    font-family: $sans;
+    font-size: 50px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    @include subheadline-mobile;
+}
+@mixin subheadline-2 {
+    @include subheadline-1;
+    font-size: 33px;
+    @include subheadline-mobile;
+}
+@mixin subheadline-3 {
+    @include subheadline-1;
+    font-size: 24px;
+    @include subheadline-mobile;
+}
+@mixin paragraph-large {
+    color: $black_cmab;
+    font-family: $serif;
+    font-size: 33px;
+    line-height: 45px;
+    -webkit-font-smoothing: antialiased;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+        line-height: 23px;
+    }
+}
+@mixin mobile-heading-fresh {
+    @include bp(mediumWidth) {
+        font-size: 20px;
+    }
+}
+@mixin paragraph-medium {
+    color: $black_cmab;
+    font-family: $serif;
+    font-size: 25px;
+    line-height: 34px;
+    -webkit-font-smoothing: antialiased;
+    @include bp(mediumWidth) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+@mixin paragraph-small {
+    color: $black_cmab;
+    font-family: $serif;
+    font-size: 21px;
+    line-height: 32px;
+    -webkit-font-smoothing: antialiased;
+    @include bp(mediumWidth) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+@mixin paragraph-tiny {
+    color: $black_cmab;
+    font-family: $serif;
+    font-size: 18px;
+    line-height: 23px;
+    -webkit-font-smoothing: antialiased;
+    @include bp(mediumWidth) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+@mixin paragraph-em {
+    color: $olive;
+    font-family: $serif;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 50px;
+    -webkit-font-smoothing: antialiased;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+        line-height: 23px;
+    }
+}
+@mixin paragraph-em-small {
+    @include paragraph-em;
+    font-size: 19px;
+    line-height: 23px;
+    -webkit-font-smoothing: antialiased;
+    @include bp(mediumWidth) {
+        font-size: 17px;
+        line-height: 23px;
+    }
+}
+@mixin span-block {
+    span {
+        display: block;
+    }
+}
+@mixin not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin max-width-image {
+    img {
+        max-width: 100%;
+    }
+}
+@mixin headline-blue {
+    color: $blue_light;
+    font-family: $sans;
+    font-size: 103px;
+    line-height: 74px;
+    text-transform: uppercase;
+}
+@mixin headline-blue-sm {
+    @include headline-blue;
+    font-size: 87px;
+    line-height: 71px;
+}
+// CTA
+@mixin border-radius-and-pie($radius:50%) {
+    behavior: url(/wp-content/themes/cmab/media/pie/PIE.php);
+    border-radius: $radius;
+}
+@mixin cta-border($bg, $color, $width) {
+    @include no-underline;
+    @include upper;
+    @include transition(background-color 0.2s);
+    background-color: $bg;
+    border: 3px solid $color;
+    color: $color;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $sans;
+    font-size: 20px;
+    height: 46px;
+    line-height: 42px;
+    padding: 0 20px;
+    width: $width;
+    &:hover {
+        @include no-underline;
+        background: $color;
+        color: $bg;
+    }
+    @include bp(mediumWidth) {
+        font-size: 19px;
+        height: 42px;
+        line-height: 36px;
+        padding: 0 10%;
+        text-align: center;
+        width: auto;        
+    }
+}

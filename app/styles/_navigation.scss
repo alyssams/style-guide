@@ -1,0 +1,391 @@
+// .sidebar-nav {
+//     padding: 9px 0;
+// }
+
+// .dropdown-menu .sub-menu {
+//     left: 100%;
+//     position: absolute;
+//     top: 0;
+//     visibility: hidden;
+//     margin-top: -1px;
+// }
+
+// .dropdown-menu li:hover .sub-menu {
+//     visibility: visible;
+// }
+
+// .dropdown:hover .dropdown-menu {
+//     display: block;
+// }
+
+// .nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+//     margin-top: 0;
+// }
+
+// .navbar .sub-menu:before {
+//     border-bottom: 7px solid transparent;
+//     border-left: none;
+//     border-right: 7px solid rgba(0, 0, 0, 0.2);
+//     border-top: 7px solid transparent;
+//     left: -7px;
+//     top: 10px;
+// }
+// .navbar .sub-menu:after {
+//     border-top: 6px solid transparent;
+//     border-left: none;
+//     border-right: 6px solid #fff;
+//     border-bottom: 6px solid transparent;
+//     left: 10px;
+//     top: 11px;
+//     left: -6px;
+// }
+
+.nav { 
+	margin-bottom: 0; 
+}
+.nav > li.dropdown.open { 
+	position: static; 
+}
+.nav > li.dropdown.open .dropdown-menu {
+	display:table; 
+	width: 100%; 
+	text-align: center; 
+	left:0;
+	right:0; 
+}
+.dropdown-menu>li { 
+	display: table-cell; 
+}
+
+.nav_group {
+	float: left;
+	.group {
+		list-style: none;
+		text-align: left;
+		&.active {
+			font-weight: bold;
+			&:after {
+				font-family: "Glyphicons Halflings";
+				content: "\e080";
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+.shelf-entries {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	zoom: 1;
+	display: none;
+	float: left;
+	width: 85%;
+	position: relative;
+	&.active {
+		display: block;
+	}
+	.shelf-entry {
+		display: inline-table;
+		height: 100%;
+		border: 1px solid black;
+		width: 19%;
+		line-height: 3.4;
+	}
+}
+
+// // Burger Menu
+
+// .navbar-fixed-top .navbar-collapse{
+//   max-height: 100vh;
+//   height: 100vh;
+//   // background: $black;
+//   background: $blueprint;
+// }
+
+// // .navbar-collapse.collapse {
+// //     display: none!important;
+// // }
+
+// // .navbar-collapse.collapse.in{
+// //     display: block!important;
+// // }
+
+// .overlay {
+// 	.nav {
+// 		@include breakpoint(smallWidth) {
+// 			margin: 0;
+// 			width: 100%;
+// 		}
+// 		text-align: center;
+// 		position: relative;
+// 		top: 40%;
+// 		width: 40%;
+// 		margin: 0 auto;
+// 		-webkit-transform: translateY(-50%);
+// 		transform: translateY(-50%);
+
+// 		.panel {
+// 			list-style: none;
+// 			padding: 0;
+// 			margin: 0 auto;
+// 			display: inline-block;
+// 			position: relative;
+// 			background: transparent;
+// 			.panel-heading {
+// 				// display: block;
+// 				// height: 20%;
+// 				// height: calc(100% / 5);
+// 				// min-height: 54px;
+// 				// -webkit-backface-visibility: hidden;
+// 				// backface-visibility: hidden;
+// 				 h4{
+// 				 	line-height: 90px;
+// 					font-size: 54px;
+// 					font-weight: 300;
+// 					display: block;
+// 					color: #fff;
+// 					-webkit-transition: color 0.2s;
+// 					transition: color 0.2s;
+// 					&:hover {
+// 						color: $blueprint_hover;
+// 					}
+// 					&:focus {
+// 						color: $blueprint_hover;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// // end of Burger Menu 
+
+// // find other elements that go in here that are lost
+
+// .nav > li > a:hover, .nav > li > a:focus {
+//   text-decoration: none;
+//   background-color: transparent;
+// }
+// .navbar-toggle {
+//   border: none;
+//   background: transparent !important;
+
+//   &:hover {
+//     background: transparent !important;
+//   }
+
+//   .icon-bar {
+//     width: 22px;
+//     transition: all 0.2s;
+//   }
+//   .top-bar {
+//     transform: rotate(45deg);
+//     transform-origin: 10% 10%;
+//   }
+//   .middle-bar {
+//     opacity: 0;
+//   }
+//   .bottom-bar {
+//     transform: rotate(-45deg);
+//     transform-origin: 10% 90%;
+//   }
+// }
+
+// .navbar-toggle.collapsed {
+//   .top-bar {
+//     transform: rotate(0);
+//   }
+//   .middle-bar {
+//     opacity: 1;
+//   }
+//   .bottom-bar {
+//     transform: rotate(0);
+//   }
+// }
+
+
+// .nav {
+// 	text-align: left;
+// 	& > li {
+// 		border-right: 1px solid $white;
+// 		display: inline-table;
+// 		font-size: 2em;
+// 		width: 22%;
+// 		&:last-child {
+// 			border-right: none;
+// 		}
+// 	}
+// }
+
+// .tree {
+// 	li {
+// 		display: block;
+// 	}
+// }
+
+// // this is for mobile. add back in after getting desktop figured out
+// // .nav {
+// // 	text-align: center;
+// // 	position: relative;
+// // 	top: 50%;
+// // 	height: 60%;
+// // 	padding: 0;
+// // 	-webkit-transform: translateY(-50%);
+// // 	transform: translateY(-50%);
+// // 	display: block;
+// // }
+
+// // .navbar-default .navbar-nav > li > a {
+// // 	padding-top: 30px;
+// // 	padding-bottom: 30px;
+// // 	font-size: 2em;
+// // }
+
+
+
+// .navbar-default {
+// 	background: #fff;
+// }
+
+// .navbar-default .navbar-toggle {
+// 	border: transparent;
+// }
+
+// .navbar-brand {
+// 	color: $black;
+// 	font-size: 1.7em;
+// }
+
+// .search-btn {
+// 	background-color: transparent;
+// 	border: none;
+// 	float: right;
+// 	margin-bottom: 8px;
+// 	margin-right: 5px;
+// 	margin-top: 5px;
+// 	padding: 9px 10px;
+// 	position: relative;
+// }
+
+// .nav {
+// 	a {
+// 		color: $white;
+// 		&:hover {
+// 			color: $blue_medium;
+// 		}
+// 	}
+// 	.panel {
+// 		margin-bottom: 20px;
+// 		border: none;
+// 		border-radius: 0px;
+// 		box-shadow: none;
+// 		.panel-collapse .list-group {
+// 			border-top: none;
+// 			margin-left: 70px;
+// 			width: 80%;
+// 			& > .list-group-item {
+// 				display: block;
+// 				background: transparent;
+// 				padding: 0;
+// 				text-align: left;
+// 				width: 100%;
+// 			}
+// 		}
+
+// 		& > .panel-heading .accordion-toggle:after {
+// 			font-family: "Glyphicons Halflings";
+// 			content: "\e113";
+// 			color: inherit;
+// 			font-size: 23px;
+// 			margin-top: 5px;
+// 		}
+// 		& > .panel-heading.collapsed .accordion-toggle:after {
+// 		    font-family: "Glyphicons Halflings";
+// 		    content: "\e114";
+// 		    margin-top: 5px;
+// 		    font-size: 23px;
+// 		}
+// 	}
+// 	.panel-title {
+// 		position: relative;
+// 		display: block;
+// 		color: $white;
+// 		font-size: 1em;
+// 		font-weight: normal;
+// 	}
+// 	.panel-default {
+// 		border-color: transparent;
+// 		& > .panel-heading {
+// 			background: transparent;
+// 			border-color: none;
+// 			padding: 0 50px;
+// 		}
+// 	}
+	
+// 	.panel-heading {
+// 		border-bottom: none;
+// 		border-top-right-radius: none;
+// 		border-top-left-radius: none;
+// 	}
+
+// 	.panel-body {
+// 		padding: 0;
+// 		ul {
+// 			padding: 0;
+// 			color: $white;
+// 			li {
+// 				list-style: none;
+// 			}
+// 		}
+// 	}
+// }
+
+// .panel > .panel-heading > .panel-title > a {
+//   text-decoration: none;
+// }
+// .pdsa-panel-toggle {
+// 	color: black;
+// 	cursor: pointer;
+// 	float: right;
+// 	top: -15px;
+// }
+
+// .list-group {
+// 	width: 100%;
+// }
+
+// .list-group-item {
+// 	background-color: $grey;
+// 	border: none;
+// 	display: inline-block;
+// 	margin-bottom: -1px;
+// 	margin: 9px;
+// 	padding: 10px 15px;
+// 	position: relative;
+// 	text-align: center;
+// 	width: 154px;
+// }
+
+// .list-group-item:first-child {
+//   border-top-right-radius: 0;
+//   border-top-left-radius: 0;
+// }
+
+// .panel-heading {
+//     cursor: pointer;
+// }
+
+//  .accordion-toggle:after {
+//     /* symbol for "opening" panels */
+//     font-family: "Glyphicons Halflings";
+//     content: "\e082";
+//     float: right;
+//     color: inherit;
+// }
+
+// .panel-heading.collapsed .accordion-toggle:after {
+//     /* symbol for "collapsed" panels */
+//     font-family: "Glyphicons Halflings";
+//     content: "\e081";
+// }
